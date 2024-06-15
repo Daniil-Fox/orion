@@ -43,6 +43,22 @@
   justify-content: space-between;
 
   text-align: center;
+  position: relative;
+  overflow: hidden;
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 40rem;
+    height: 40rem;
+    background-image: url('./../img/logo-sign.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: translate(30%, 20%);
+    opacity: 0.05;
+  }
   &__title {
     display: block;
     margin-bottom: 3rem;

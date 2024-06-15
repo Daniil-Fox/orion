@@ -4,6 +4,7 @@
   &__title {
     margin-bottom: 4rem;
     text-align: right;
+    justify-content: flex-end;
     &::before {
       white-space: unset;
       top: unset;

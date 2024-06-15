@@ -105,7 +105,7 @@ a {
 .title2 {
   margin: 0;
   margin-bottom: 6rem;
-  font-size: 8rem;
+  font-size: 7rem;
   font-weight: 700;
   text-transform: uppercase;
   color: #2760A7;
@@ -118,7 +118,7 @@ a {
     position: absolute;
     top: 0;
     left: 0rem;
-    font-size: 12rem;
+    font-size: 10rem;
     opacity: 0.07;
     font-weight: 700;
     color: currentColor;
@@ -132,8 +132,9 @@ a {
   margin-bottom: 2rem;
   font-size: 2.2rem;
   color: #000;
-  line-height: 120%;
-  font-weight: 500;
+  line-height: 144%;
+  font-weight: 300;
+  letter-spacing: 0.02em;
 }
 
 
@@ -144,10 +145,15 @@ a {
   justify-content: center;
   text-decoration: none;
   color: #fff;
-  border: 1px solid #fff;
-  background-color: rgb(116, 116, 116);
-  transition: background-color .3s ease-out;
+  // border: 1px solid #fff;
   background-color: #2760A7;
+  transition: background-color .3s ease-out;
+  font-size: 2rem;
+  font-weight: 300;
+
+  @include hover {
+    background-color: #327ad3;
+  }
 }
 
 
@@ -192,4 +198,9 @@ a {
     will-change: max-height;
     transition: max-height .3s ease-out
   }
+}
+
+
+.contacts {
+  margin-bottom: 12rem;
 }

@@ -4,14 +4,30 @@
 }
 
 .service {
-  border: 1px solid var(--text-color);
+  border: 1px solid #ccc;
   // border-radius: 2rem;
   box-shadow: 1rem 1rem 2rem rgba(#000, .1);
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: 2rem;
+  position: relative;
+  overflow: hidden;
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 40rem;
+    height: 40rem;
+    background-image: url('./../img/logo-sign.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: translate(30%, 20%);
+    opacity: 0.05;
+  }
   &:not(:last-child){
-    margin-bottom: 2rem;
+    margin-bottom: 6rem;
   }
   &__image {
     grid-column: 5 span;
@@ -40,7 +56,8 @@
   &__desc {
     margin: 0;
     font-size: 2rem;
-    line-height: 120%;
-    font-weight: 500;
+    line-height: 144%;
+    font-weight: 300;
+    letter-spacing: 0.02em;
   }
 }

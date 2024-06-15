@@ -73,6 +73,7 @@
       font-size: 7rem;
       color: #3175a8;
       font-weight: 700;
+      letter-spacing: 0.02em;
   }
   &__desc {
       margin: 0;
@@ -86,20 +87,7 @@
           text-transform: initial;
       }
   }
-  &__btn {
-      padding: 2rem 6rem;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      text-decoration: none;
-      color: #fff;
-      border: 1px solid #fff;
-      transition: background-color .3s ease-out;
-      background-color: #2760A7;
-      &:hover {
 
-      }
-  }
   &__ben {
       display: flex;
       align-items: center;
@@ -111,7 +99,7 @@
       color: #fff;
       span {
           display: block;
-          color: #3175a8;
+          color: var(--text-color);
       }
   }
   &__benefits {
@@ -120,10 +108,12 @@
       z-index: 10;
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      gap: 2rem;
+      justify-content: space-evenly;
+      gap: 4rem;
+      flex-wrap: wrap;
   }
   &__icon {
+    padding: 2rem;
       flex-shrink: 0;
       display: flex;
       align-items: center;
