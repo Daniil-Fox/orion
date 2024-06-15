@@ -1,0 +1,21 @@
+.footer {
+  padding: 2rem 0;
+  background-color: #000;
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__nav {
+    .nav__list {
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+  }
+}

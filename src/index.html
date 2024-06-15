@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body">
+  <div class="site-container">
+    @include('partials/header.html')
+    <main class="main">
+      @include('partials/hero.html')
+      @include('partials/benefits.html')
+      @include('partials/about.html')
+      @include('partials/services.html')
+      @include('partials/licence.html')
+      @include('partials/job.html')
+      @include('partials/reason.html')
+      <!-- @include('partials/cta.html') -->
+
+      <div class="site-tel">
+        <div class="site-tel__header">
+          <img src="./img/icons/tel.png" alt="">
+        </div>
+        <div class="site-tel__content">
+          <div class="site-tel__close">
+            &times;
+          </div>
+          <a href="tel:" class="header__tel">
+            <span>Горячяя линия</span>
+            +7(999)999-32-32
+          </a>
+          <a href="tel:" class="header__tel">
+            <span>Отдел кадров</span>
+            +7(999)999-32-32
+          </a>
+        </div>
+      </div>
+    </main>
+    @include('partials/footer.html')
+  </div>
+  <script type="module">
+
+    window.map = null;
+
+    main();
+    async function main() {
+      await ymaps3.ready;
+      const {YMap, YMapDefaultSchemeLayer, YMapDefaultFeaturesLayer} = ymaps3;
+      const {YMapDefaultMarker} = await ymaps3.import('@yandex/ymaps3-markers@0.0.1');
+
+      map = new YMap(
+        document.getElementById('map'),
+        {location: {
+            center: [37.588144, 55.733842],
+            zoom: 16
+          }
+        },
+        [
+          new YMapDefaultSchemeLayer({}),
+          new YMapDefaultFeaturesLayer({})
+        ]
+      );
+      const marker = new YMapDefaultMarker({
+        coordinates: [37.588144, 55.733842],
+        color: '#2760A7'
+      });
+      map.addChild(marker);
+    }
+  </script>
+</body>
+
+</html>
