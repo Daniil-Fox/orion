@@ -5,17 +5,45 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include mobile {
+      flex-direction: column;
+      gap: 2rem;
+    }
   }
 
   &__links {
-    display: flex;
-    flex-direction: column;
+    // display: flex;
+    // flex-direction: column;
+
+    @include mobile {
+      // display: block ;
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: 0;
+      text-align: left;
+      flex-direction: row;
+    }
+    .header__tel {
+      @include mobile {
+        text-align: left;
+
+        span {
+          text-align: center;
+        }
+      }
+    }
   }
 
   &__nav {
     .nav__list {
       // flex-direction: column;
       gap: 1.5rem;
+
+      @include mobile {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
     }
   }
 }

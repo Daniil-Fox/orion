@@ -1,0 +1,47 @@
+.menu {
+  position: absolute;
+  z-index: 90;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--text-color);
+  transform: translateX(100%);
+  transition: transform .3s ease-out;
+  display: none;
+  @include mobile {
+    display: block;
+  }
+  &.active {
+    transform: translateX(0);
+  }
+  &__body {
+    padding: 2rem;
+    padding-top: 12vh;
+  }
+
+  &__nav {
+    .nav__list {
+      flex-direction: column;
+    }
+    .nav__link {
+      font-size: 2.6rem;
+    }
+    margin-bottom: 4rem;
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+
+    span {
+      font-size: 2.2rem;
+      text-align: center;
+    }
+    a {
+      font-size: 2.6rem;
+    }
+  }
+}

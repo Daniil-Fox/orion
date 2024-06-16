@@ -1,8 +1,22 @@
 .benefits {
   padding: 6rem 0;
   padding-bottom: 0;
+  &__title {
+    @include mobile {
+      &::before {
+        white-space: inherit;
+        bottom: 0;
+        top: unset;
+      }
+    }
+  }
   &__container {
     display: flex;
+
+    @include mobile {
+      // flex-wrap: wrap;
+      flex-direction: column;
+    }
   }
 
   &__item {
@@ -13,6 +27,13 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+
+    @include tablet {
+      padding: 2rem 1.5rem;
+    }
+    @include mobile {
+      padding: 1rem;
+    }
   }
   &__capture {
     display: block;
@@ -21,13 +42,24 @@
     font-weight: 700;
     line-height: 1;
     color: var(--text-color);
+
+    @include tablet {
+      font-size: 8rem;
+    }
+    @include mobile {
+      font-size: 5rem;
+    }
   }
   &__value {
     font-size: 2.2rem;
-    font-weight: 700;
+    font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0.02em;
     line-height: 144%;
     text-align: center;
+
+    @include tablet {
+      font-size: 1.8rem;
+    }
   }
 }

@@ -1,14 +1,35 @@
 .job {
   margin: 6rem 0 12rem;
+
+  @include tablet {
+    margin: 0;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+  @include mobile {
+    padding-top: 0rem;
+    padding-bottom: 4rem;
+  }
 }
 
 
 .job-banner {
   display: flex;
+  align-items: center;
   background-color: #000;
+  @include mobile {
+    flex-direction: column;
+  }
   &__title {
+    margin: 0;
     font-size: 6rem;
     color: #fff;
+    @include tablet {
+      font-size: 5rem;
+    }
+    @include mobile {
+      font-size: 3rem;
+    }
   }
   &__content {
     flex: 1;
@@ -16,6 +37,13 @@
     display: flex;
     align-items: center;
     height: 100%;
+
+    @include tablet {
+      padding: 3rem 5rem;
+    }
+    @include mobile {
+      padding: 4rem 2rem;
+    }
   }
   &__image {
     flex: 1;
@@ -32,6 +60,13 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 3rem;
+
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
   }
 }
 .job-item {
@@ -48,7 +83,7 @@
   &::after {
     content: "";
     position: absolute;
-    right: 0;
+    left: 0;
     bottom: 0;
     width: 40rem;
     height: 40rem;
@@ -56,7 +91,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    transform: translate(30%, 20%);
+    transform: translate(-30%, 20%);
     opacity: 0.05;
   }
   &__title {
@@ -67,17 +102,25 @@
     font-size: 4rem;
     text-transform: uppercase;
     color: var(--text-color);
+    letter-spacing: 0.02em;
+    @include mobile {
+      font-size: 3rem;
+      margin-bottom: 2rem;
+    }
   }
   &__capture {
     display: block;
     margin-bottom: 1.5rem;
     font-weight: 700;
     font-size: 2.6rem;
-    // text-align: center;
+    letter-spacing: 0.02em;
 
     span {
-      // text-align: left;
       color: var(--text-color);
+    }
+    @include mobile {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
     }
   }
   &__list {
@@ -86,6 +129,10 @@
     padding-left: 2rem;
     margin-bottom: 2rem;
     list-style: none;
+
+    @include mobile {
+      margin-bottom: 1rem;
+    }
   }
   &__item {
     font-size: 2rem;
@@ -93,6 +140,10 @@
     color: var(--text-color);
     &:not(:last-child){
       margin-bottom: 1rem;
+    }
+
+    @include mobile {
+      font-size: 1.6rem;
     }
   }
 

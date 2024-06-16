@@ -19,3 +19,21 @@ siteTelClose.addEventListener('click', e => {
   siteTelContent.style.display = null
   siteTelContent.style.maxHeight = null
 })
+
+
+
+const menu = document.querySelector('.menu')
+const menuBtn = document.querySelector('.header__burger')
+const menuItems = menu.querySelectorAll('.nav__link')
+
+menuBtn.addEventListener('click', e => {
+  menu.classList.toggle('active')
+  menuBtn.classList.toggle('active')
+})
+
+menuItems.forEach(link => {
+  link.addEventListener('click', e => {
+    menu.classList.remove('active')
+    menuBtn.classList.remove('active')
+  })
+})
