@@ -84,7 +84,7 @@
   &__title {
       margin: 0;
       font-size: 7rem;
-      color: #3175a8;
+      color: var(--text-color);
       font-weight: 700;
       letter-spacing: 0.02em;
       @include tablet {

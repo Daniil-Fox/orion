@@ -300,6 +300,12 @@ a {
 
 .contacts {
   margin-bottom: 12rem;
+  padding-top: 12rem;
+}
+@media (max-width: 1279px) {
+  .contacts {
+    padding-top: 6rem;
+  }
 }
 
 .header {
@@ -556,7 +562,7 @@ a {
 .hero__title {
   margin: 0;
   font-size: 7rem;
-  color: #3175a8;
+  color: var(--text-color);
   font-weight: 700;
   letter-spacing: 0.02em;
 }
@@ -886,6 +892,7 @@ a {
   gap: 1.5rem;
 }
 .about-info__icon {
+  display: block;
   -ms-flex-negative: 0;
   flex-shrink: 0;
   width: 6rem;
@@ -906,6 +913,7 @@ a {
   text-transform: uppercase;
   color: var(--text-color);
   line-height: 144%;
+  color: #000;
 }
 .about-info__tel {
   font-size: 2.2rem;
@@ -913,6 +921,7 @@ a {
   white-space: nowrap;
   line-height: 144%;
   letter-spacing: 0.02em;
+  color: var(--text-color);
 }
 @media (max-width: 576px) {
   .about-info__tel {
@@ -924,6 +933,7 @@ a {
   font-weight: 300;
   letter-spacing: 0.02em;
   line-height: 144%;
+  color: var(--text-color);
 }
 @media (max-width: 576px) {
   .about-info__address {
@@ -1026,9 +1036,9 @@ a {
 }
 
 .service {
-  border: 1px solid #ccc;
-  -webkit-box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.1);
-  box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.1);
+  border: 1px solid #f1f1f1;
+  -webkit-box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.05);
+  box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.05);
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[12];
@@ -1314,9 +1324,9 @@ a {
 
 .job-item {
   padding: 5rem;
-  border: 1px solid #000;
-  -webkit-box-shadow: 2rem 2rem 4rem rgba(0, 0, 0, 0.2);
-  box-shadow: 2rem 2rem 4rem rgba(0, 0, 0, 0.2);
+  border: 1px solid #f1f1f1;
+  -webkit-box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.05);
+  box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.05);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1334,6 +1344,7 @@ a {
 .job-item::after {
   content: "";
   position: absolute;
+  z-index: -1;
   left: 0;
   bottom: 0;
   width: 40rem;
@@ -1409,12 +1420,10 @@ a {
 
 .reason {
   padding-top: 12rem;
-  margin-bottom: 12rem;
 }
 @media (max-width: 576px) {
   .reason {
     padding-top: 0rem;
-    margin-bottom: 6rem;
   }
 }
 .reason__title {

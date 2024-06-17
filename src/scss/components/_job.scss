@@ -71,8 +71,8 @@
 }
 .job-item {
   padding: 5rem;
-  border: 1px solid #000;
-  box-shadow: 2rem 2rem 4rem rgba(#000, .2);
+  border: 1px solid #f1f1f1;
+  box-shadow: 1rem 1rem 2rem rgba(#000, .05);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -83,6 +83,7 @@
   &::after {
     content: "";
     position: absolute;
+    z-index: -1;
     left: 0;
     bottom: 0;
     width: 40rem;
