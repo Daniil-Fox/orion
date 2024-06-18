@@ -12,7 +12,7 @@
     &::before {
       white-space: unset;
       top: unset;
-      bottom: 2rem;
+      bottom: 25%;
       line-height: 0.9;
 
       @include mobile {
@@ -28,7 +28,6 @@
   }
   &__desc {
     margin-bottom: 5rem;
-    text-align: right;
     @include mobile {
       text-align: left;
     }
